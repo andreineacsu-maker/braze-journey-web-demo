@@ -1,0 +1,1 @@
+self.importScripts("https://js.appboycdn.com/web-sdk/latest/service-worker.js");

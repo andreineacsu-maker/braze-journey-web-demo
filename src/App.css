@@ -1,0 +1,56 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+@layer base {
+  * {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  *::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
+}
+
+video {
+  border-radius:inherit;
+}
+
+*{
+  font-family:"Roboto";
+}
+#blurred-background-low-opacity {
+  /* 1. Essential: Position relative establishes a boundary for the ::before element */
+  position: relative;
+  /* Optional: Ensures the blur doesn't leak outside the container edges */
+  overflow: hidden; 
+  /* Give it a background color if the image is too transparent (optional fallback) */
+  background-color: transparent; 
+  z-index:0;
+}
+
+#blurred-background-low-opacity::before {
+  content: "";
+  
+  /* 2. Position absolute to fill the parent */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  /* 3. Your background image styles go HERE */
+  background-image: url('assets/background.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  /* 4. Apply the effects */
+  opacity: 0.1;      /* 10% opacity */
+  filter: blur(8px); /* Adjust blur amount as needed */
+  
+  /* 5. Send it to the back so it doesn't cover the text */
+  z-index: -1;
+}
