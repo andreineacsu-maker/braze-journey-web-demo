@@ -12,7 +12,6 @@
   "dependencies": {
     "@braze/web-sdk": "^6.3.1",
     "@clerk/clerk-react": "^5.55.0",
-    "@clerk/nextjs": "^6.35.1",
     "@clerk/react-router": "^2.2.1",
     "@heroicons/react": "^2.2.0",
     "@tailwindcss/vite": "^4.1.17",
