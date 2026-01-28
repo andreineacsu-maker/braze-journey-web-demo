@@ -2,7 +2,7 @@ import { SignedIn, SignedOut, useUser } from '@clerk/clerk-react';
 import { useState } from 'react';
 import "../src/App.css"
 import SignInPage from './Components/SignInPage';
-import BrazeConfig from './Components/brazeConfig';
+import BrazeConfig from './Components/BrazeConfig';
 import Sidebar from './Components/Sidebar';
 import MainLayout from './Components/MainLayout';
 
